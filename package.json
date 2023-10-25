@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Danilo-Sam/evento_aniversario#readme",
   "devDependencies": {
-    "parcel": "^2.9.0"
+    "@parcel/transformer-sass": "^2.9.0",
+    "parcel": "^2.9.0",
+    "sharp": "^0.31.3"
   }
 }
