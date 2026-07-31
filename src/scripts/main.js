@@ -3,6 +3,18 @@ AOS.init();
 const dataDoEvento = new Date("Aug 14, 2024 19:00:00");
 const timeStampDoEvento = dataDoEvento.getTime();
 
+function formatarDataDoEvento(date) {
+    const dia = String(date.getDate()).padStart(2, '0');
+    const mes = String(date.getMonth() + 1).padStart(2, '0');
+    const ano = date.getFullYear();
+    const horas = String(date.getHours()).padStart(2, '0');
+    const minutos = String(date.getMinutes()).padStart(2, '0');
+
+    return `${dia}/${mes}/${ano} às ${horas}:${minutos}`;
+}
+
+document.getElementById('data-do-evento').textContent = formatarDataDoEvento(dataDoEvento);
+
 const contaTempo = setInterval(function() {
     const agora = new Date();
     const timeStampAtual = agora.getTime();
@@ -24,4 +36,4 @@ const contaTempo = setInterval(function() {
         clearInterval(contaTempo);
         document.getElementById('contador').innerHTML = 'Evento expirado';
     }
-},1000);
+}, 1000);
